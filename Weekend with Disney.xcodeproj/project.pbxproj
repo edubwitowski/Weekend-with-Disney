@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA19DD0D1FCC823600EC52D8 /* disneyTimes.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA19DD0C1FCC823600EC52D8 /* disneyTimes.plist */; };
 		FADC9B471FAA1B2F0071549A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC9B461FAA1B2F0071549A /* AppDelegate.swift */; };
 		FADC9B491FAA1B2F0071549A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC9B481FAA1B2F0071549A /* ViewController.swift */; };
 		FADC9B4C1FAA1B2F0071549A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADC9B4A1FAA1B2F0071549A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA19DD0C1FCC823600EC52D8 /* disneyTimes.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = disneyTimes.plist; sourceTree = "<group>"; };
 		FADC9B431FAA1B2F0071549A /* Weekend with Disney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weekend with Disney.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADC9B461FAA1B2F0071549A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADC9B481FAA1B2F0071549A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				FADC9B4D1FAA1B2F0071549A /* Assets.xcassets */,
 				FADC9B4F1FAA1B2F0071549A /* LaunchScreen.storyboard */,
 				FADC9B521FAA1B2F0071549A /* Info.plist */,
+				FA19DD0C1FCC823600EC52D8 /* disneyTimes.plist */,
 			);
 			path = "Weekend with Disney";
 			sourceTree = "<group>";
@@ -132,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FADC9B6B1FAA1B2F0071549A /* Build configuration list for PBXNativeTarget "Weekend with Disney" */;
 			buildPhases = (
+				FDD3B6B0EF5A8938823CC0EB /* [CP] Check Pods Manifest.lock */,
 				FADC9B3F1FAA1B2F0071549A /* Sources */,
 				FADC9B401FAA1B2F0071549A /* Frameworks */,
 				FADC9B411FAA1B2F0071549A /* Resources */,
+				18698333A0009D9717253038 /* [CP] Embed Pods Frameworks */,
+				A1CE25D371617D2CD9504A14 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADC9B511FAA1B2F0071549A /* LaunchScreen.storyboard in Resources */,
+				FA19DD0D1FCC823600EC52D8 /* disneyTimes.plist in Resources */,
 				FADC9B4E1FAA1B2F0071549A /* Assets.xcassets in Resources */,
 				FADC9B4C1FAA1B2F0071549A /* Main.storyboard in Resources */,
 			);
@@ -253,6 +260,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18698333A0009D9717253038 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Weekend with Disney/Pods-Weekend with Disney-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyPlistManager/SwiftyPlistManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyPlistManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Weekend with Disney/Pods-Weekend with Disney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1CE25D371617D2CD9504A14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Weekend with Disney/Pods-Weekend with Disney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD3B6B0EF5A8938823CC0EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Weekend with Disney-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FADC9B3F1FAA1B2F0071549A /* Sources */ = {
